@@ -1,0 +1,8 @@
+.DS_Store
+.env
+tmp
+main
+.vscode
+cover.out
+.idea
+.air.*
