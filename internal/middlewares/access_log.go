@@ -67,32 +67,12 @@ func AccessLog() gin.HandlerFunc {
 			"route_path_params": routePathParamMap,
 		})
 
-		if len(c.Errors) > 0 {
-			// Append error field if this is an erroneous request.
-			var errString string
-			for i, v := range c.Errors {
-				if i >= 1 {
-					errString += " | "
-				}
-				if assertErr(v.Err) != "FDC_NOT_ELIGIBLE" {
-					errString += assertErr(v.Err)
-				}
-			}
-			if errString == "" {
-				return
-			}
-			cl = cl.WithFields(logs.Fields{
-				"error_string": errString,
-			})
-			logs.PushLog("loanhub_error", cl)
-		} else {
-			if c.Request.Method == "GET" || c.Request.Method == "OPTIONS" {
-				return
-			}
-
-			cl.Info("GIN access log")
-			logs.ActivityLog(cl)
+		if c.Request.Method == "GET" || c.Request.Method == "OPTIONS" {
+			return
 		}
+
+		cl.Info("GIN access log")
+		logs.ActivityLog(cl)
 	}
 }
 
