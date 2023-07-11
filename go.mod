@@ -1,4 +1,4 @@
-module mgw/mgw-resi
+module go/skeleton
 
 go 1.16
 

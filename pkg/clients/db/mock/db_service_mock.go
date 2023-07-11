@@ -11,7 +11,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 
-	"mgw/mgw-resi/pkg/clients/db"
+	"go/skeleton/pkg/clients/db"
 )
 
 type dbDelegateMock struct {

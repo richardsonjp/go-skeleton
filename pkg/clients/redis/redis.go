@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"encoding/json"
 	"fmt"
-	"mgw/mgw-resi/config"
+	"go/skeleton/config"
 	"sync"
 	"time"
 

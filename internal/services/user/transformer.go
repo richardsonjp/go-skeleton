@@ -1,6 +1,6 @@
 package user
 
-import "mgw/mgw-resi/internal/model"
+import "go/skeleton/internal/model"
 
 func (c *UserResponse) Transformer(data model.User) {
 	c.ID = data.ID

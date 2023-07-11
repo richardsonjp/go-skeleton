@@ -9,7 +9,7 @@ import (
 	"log"
 	"sync"
 
-	"mgw/mgw-resi/config"
+	"go/skeleton/config"
 
 	"github.com/DATA-DOG/go-sqlmock"
 

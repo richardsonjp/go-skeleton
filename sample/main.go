@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"mgw/mgw-resi/sample/apis"
+	"go/skeleton/sample/apis"
 )
 
 var (

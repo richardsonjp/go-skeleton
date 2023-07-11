@@ -2,9 +2,9 @@ package math
 
 import (
 	"fmt"
+	"go/skeleton/pkg/utils/null"
 	"math"
 	"math/rand"
-	"mgw/mgw-resi/pkg/utils/null"
 	"strconv"
 	"strings"
 	"time"

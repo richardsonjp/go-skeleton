@@ -2,8 +2,8 @@ package country
 
 import (
 	"context"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/pkg/clients/db"
+	"go/skeleton/internal/model"
+	"go/skeleton/pkg/clients/db"
 )
 
 type CountryRepo interface {

@@ -1,12 +1,12 @@
 package middlewares
 
 import (
-	"mgw/mgw-resi/config"
-	"mgw/mgw-resi/pkg/utils/logs"
-	netutil "mgw/mgw-resi/pkg/utils/net"
-	"mgw/mgw-resi/pkg/utils/parse"
-	stringer "mgw/mgw-resi/pkg/utils/strings"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	"go/skeleton/config"
+	"go/skeleton/pkg/utils/logs"
+	netutil "go/skeleton/pkg/utils/net"
+	"go/skeleton/pkg/utils/parse"
+	stringer "go/skeleton/pkg/utils/strings"
+	timeutil "go/skeleton/pkg/utils/time"
 
 	"github.com/gin-gonic/gin"
 )

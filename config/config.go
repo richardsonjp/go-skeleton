@@ -6,8 +6,8 @@ import (
 	"github.com/caarlos0/env/v6"
 	"github.com/joho/godotenv"
 
-	"mgw/mgw-resi/pkg/utils/file"
-	"mgw/mgw-resi/pkg/utils/json"
+	"go/skeleton/pkg/utils/file"
+	"go/skeleton/pkg/utils/json"
 )
 
 // Config global setting

@@ -13,8 +13,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"mgw/mgw-resi/pkg/utils/api"
-	"mgw/mgw-resi/pkg/utils/constant"
+	"go/skeleton/pkg/utils/api"
+	"go/skeleton/pkg/utils/constant"
 )
 
 // E construct an error (usually the error is GenericError).

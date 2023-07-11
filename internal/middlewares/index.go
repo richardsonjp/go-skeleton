@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	service "mgw/mgw-resi/internal/services"
+	service "go/skeleton/internal/services"
 )
 
 type MiddlewareAccess struct {

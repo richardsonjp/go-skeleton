@@ -2,7 +2,7 @@ package validator
 
 import (
 	"fmt"
-	"mgw/mgw-resi/pkg/utils/wording"
+	"go/skeleton/pkg/utils/wording"
 	"reflect"
 	"strings"
 

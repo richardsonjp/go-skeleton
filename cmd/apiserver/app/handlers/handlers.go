@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"mgw/mgw-resi/cmd/apiserver/app/handlers/user"
-	"mgw/mgw-resi/cmd/apiserver/app/handlers/user_auth"
+	"go/skeleton/cmd/apiserver/app/handlers/user"
+	"go/skeleton/cmd/apiserver/app/handlers/user_auth"
 )
 
 // put handlers alias

@@ -2,10 +2,10 @@ package authentication
 
 import (
 	"context"
-	"mgw/mgw-resi/internal/repositories/tx"
-	"mgw/mgw-resi/internal/services/branch"
-	"mgw/mgw-resi/internal/services/credential"
-	"mgw/mgw-resi/internal/services/user"
+	"go/skeleton/internal/repositories/tx"
+	"go/skeleton/internal/services/branch"
+	"go/skeleton/internal/services/credential"
+	"go/skeleton/internal/services/user"
 )
 
 type AuthenticationService interface {

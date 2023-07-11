@@ -2,8 +2,8 @@
 package validator
 
 import (
-	"mgw/mgw-resi/pkg/utils/lang"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	"go/skeleton/pkg/utils/lang"
+	timeutil "go/skeleton/pkg/utils/time"
 
 	"github.com/go-playground/validator/v10"
 	"regexp"

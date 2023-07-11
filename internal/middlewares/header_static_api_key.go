@@ -2,8 +2,8 @@ package middlewares
 
 import (
 	"github.com/gin-gonic/gin"
-	"mgw/mgw-resi/config"
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/config"
+	"go/skeleton/pkg/utils/errors"
 	"net/http"
 )
 

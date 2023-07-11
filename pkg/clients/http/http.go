@@ -3,14 +3,14 @@ package http
 import (
 	"encoding/json"
 	"fmt"
-	"mgw/mgw-resi/pkg/utils/logs"
-	stringer "mgw/mgw-resi/pkg/utils/strings"
+	"go/skeleton/pkg/utils/logs"
+	stringer "go/skeleton/pkg/utils/strings"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
 
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	timeutil "go/skeleton/pkg/utils/time"
 
 	"github.com/go-resty/resty/v2"
 )
@@ -155,7 +155,7 @@ func (hr *HTTPClient) get(path string, params *map[string]string, headers map[st
 		SetHeaders(headers).
 		SetResult(val)
 
-		// Set Query params
+	// Set Query params
 	if params == nil {
 		// Handle nil params
 		params = &map[string]string{}

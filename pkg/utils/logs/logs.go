@@ -1,8 +1,8 @@
 package logs
 
 import (
+	timeutil "go/skeleton/pkg/utils/time"
 	"io"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
 	"os"
 	"reflect"
 

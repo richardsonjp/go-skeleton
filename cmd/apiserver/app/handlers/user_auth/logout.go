@@ -3,9 +3,9 @@ package user_auth
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"mgw/mgw-resi/internal/services/authentication"
-	"mgw/mgw-resi/pkg/utils/api"
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/internal/services/authentication"
+	"go/skeleton/pkg/utils/api"
+	"go/skeleton/pkg/utils/errors"
 	"net/http"
 )
 

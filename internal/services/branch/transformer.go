@@ -1,6 +1,6 @@
 package branch
 
-import "mgw/mgw-resi/internal/model"
+import "go/skeleton/internal/model"
 
 func (c *BranchResponse) Transformer(data model.Branch) {
 	c.ID = data.ID

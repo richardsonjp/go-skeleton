@@ -2,7 +2,7 @@ package credential
 
 import (
 	"context"
-	repos "mgw/mgw-resi/internal/repositories"
+	repos "go/skeleton/internal/repositories"
 )
 
 type CredentialService interface {

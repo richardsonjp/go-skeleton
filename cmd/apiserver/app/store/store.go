@@ -1,12 +1,12 @@
 package store
 
 import (
-	handler "mgw/mgw-resi/cmd/apiserver/app/handlers"
-	"mgw/mgw-resi/config"
-	"mgw/mgw-resi/internal/middlewares"
-	repos "mgw/mgw-resi/internal/repositories"
-	service "mgw/mgw-resi/internal/services"
-	"mgw/mgw-resi/pkg/clients/db"
+	handler "go/skeleton/cmd/apiserver/app/handlers"
+	"go/skeleton/config"
+	"go/skeleton/internal/middlewares"
+	repos "go/skeleton/internal/repositories"
+	service "go/skeleton/internal/services"
+	"go/skeleton/pkg/clients/db"
 )
 
 var (

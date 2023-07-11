@@ -1,6 +1,6 @@
 package api
 
-import "mgw/mgw-resi/pkg/utils/constant"
+import "go/skeleton/pkg/utils/constant"
 
 type (
 	Base struct {

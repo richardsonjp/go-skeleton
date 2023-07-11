@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/base64"
 	"fmt"
-	"mgw/mgw-resi/pkg/utils/null"
+	"go/skeleton/pkg/utils/null"
 	"strings"
 )
 

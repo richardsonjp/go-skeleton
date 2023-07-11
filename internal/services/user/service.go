@@ -2,12 +2,12 @@ package user
 
 import (
 	"context"
+	"go/skeleton/internal/model"
+	"go/skeleton/internal/model/enum"
+	"go/skeleton/internal/services/constant"
+	"go/skeleton/pkg/utils/errors"
+	timeutil "go/skeleton/pkg/utils/time"
 	"golang.org/x/crypto/bcrypt"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/internal/model/enum"
-	"mgw/mgw-resi/internal/services/constant"
-	"mgw/mgw-resi/pkg/utils/errors"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
 )
 
 func (s *userService) CreateUser(ctx context.Context, accessorRoleID uint, params UserCreatePayload, branchID uint) error {

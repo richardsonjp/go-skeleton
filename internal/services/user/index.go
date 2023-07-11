@@ -2,8 +2,8 @@ package user
 
 import (
 	"context"
-	repos "mgw/mgw-resi/internal/repositories"
-	"mgw/mgw-resi/internal/services/role"
+	repos "go/skeleton/internal/repositories"
+	"go/skeleton/internal/services/role"
 )
 
 type UserService interface {

@@ -1,6 +1,6 @@
 package role
 
-import "mgw/mgw-resi/internal/model"
+import "go/skeleton/internal/model"
 
 func (c *RoleResponse) Transformer(data model.Role) {
 	c.ID = data.ID

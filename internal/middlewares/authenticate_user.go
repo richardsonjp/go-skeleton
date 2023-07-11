@@ -2,8 +2,8 @@ package middlewares
 
 import (
 	"github.com/gin-gonic/gin"
-	"mgw/mgw-resi/internal/services/authentication"
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/internal/services/authentication"
+	"go/skeleton/pkg/utils/errors"
 	"net/http"
 	"strings"
 )

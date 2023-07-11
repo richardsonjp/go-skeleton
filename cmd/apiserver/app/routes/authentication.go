@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"mgw/mgw-resi/cmd/apiserver/app/store"
+	"go/skeleton/cmd/apiserver/app/store"
 )
 
 func initAuthenticationRoute(group *gin.RouterGroup) {

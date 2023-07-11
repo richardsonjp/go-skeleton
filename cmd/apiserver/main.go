@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"mgw/mgw-resi/cmd/apiserver/app"
-	"mgw/mgw-resi/config"
+	"go/skeleton/cmd/apiserver/app"
+	"go/skeleton/config"
 	"os"
 )
 

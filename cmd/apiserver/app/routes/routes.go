@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"mgw/mgw-resi/cmd/apiserver/app/store"
-	"mgw/mgw-resi/internal/middlewares"
+	"go/skeleton/cmd/apiserver/app/store"
+	"go/skeleton/internal/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

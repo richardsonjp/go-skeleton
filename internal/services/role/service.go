@@ -2,8 +2,8 @@ package role
 
 import (
 	"context"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/internal/model/enum"
+	"go/skeleton/internal/model"
+	"go/skeleton/internal/model/enum"
 )
 
 func (s *roleService) CreateRole(ctx context.Context, name string) error {

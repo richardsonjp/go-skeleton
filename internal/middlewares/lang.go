@@ -2,7 +2,7 @@
 package middlewares
 
 import (
-	"mgw/mgw-resi/pkg/utils/lang"
+	"go/skeleton/pkg/utils/lang"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/text/language"

@@ -1,7 +1,7 @@
 package user_auth
 
 import (
-	service "mgw/mgw-resi/internal/services"
+	service "go/skeleton/internal/services"
 )
 
 type UserAuthHandler struct {

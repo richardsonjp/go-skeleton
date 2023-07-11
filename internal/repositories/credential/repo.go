@@ -2,8 +2,8 @@ package credential
 
 import (
 	"context"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/internal/model"
+	"go/skeleton/pkg/utils/errors"
 )
 
 func (r *credentialRepo) Create(ctx context.Context, m model.Credential) error {

@@ -1,7 +1,7 @@
 package enum
 
 import (
-	"mgw/mgw-resi/pkg/utils/constant"
+	"go/skeleton/pkg/utils/constant"
 	"strings"
 )
 

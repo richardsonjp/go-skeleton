@@ -3,10 +3,10 @@ package branch
 import (
 	"context"
 	"github.com/google/uuid"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/internal/model/enum"
-	"mgw/mgw-resi/internal/services/constant"
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/internal/model"
+	"go/skeleton/internal/model/enum"
+	"go/skeleton/internal/services/constant"
+	"go/skeleton/pkg/utils/errors"
 )
 
 func (s *branchService) CreateBranch(ctx context.Context, params BranchCreatePayload, roleName string) error {

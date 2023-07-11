@@ -1,7 +1,7 @@
 package errors
 
 import (
-	"mgw/mgw-resi/pkg/utils/constant"
+	"go/skeleton/pkg/utils/constant"
 	"net/http"
 	"strconv"
 

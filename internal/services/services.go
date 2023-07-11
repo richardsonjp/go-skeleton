@@ -1,11 +1,11 @@
 package service
 
 import (
-	"mgw/mgw-resi/internal/services/authentication"
-	"mgw/mgw-resi/internal/services/branch"
-	"mgw/mgw-resi/internal/services/credential"
-	"mgw/mgw-resi/internal/services/role"
-	"mgw/mgw-resi/internal/services/user"
+	"go/skeleton/internal/services/authentication"
+	"go/skeleton/internal/services/branch"
+	"go/skeleton/internal/services/credential"
+	"go/skeleton/internal/services/role"
+	"go/skeleton/internal/services/user"
 )
 
 // put services alias

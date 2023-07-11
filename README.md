@@ -19,15 +19,13 @@
 
 ### Requirements
 
-- Golang:1.16.5
-- MySQL:8.0.25
+- Golang:1.16
 - [Gin](https://github.com/gin-gonic/gin/tree/v1.7.2)
 - [Gorm](https://github.com/go-gorm/gorm/tree/v1.21.11)
-- [Goose](https://github.com/pressly/goose)
+- [Migrate](https://github.com/golang-migrate/migrate)
 - [Richgo](https://github.com/kyoh86/richgo)
 - [Godotenv](https://github.com/joho/godotenv/v1.3.0)
 - [Validator](https://github.com/go-playground/validator)
-- [Delve](https://github.com/go-delve/delve) Debug swiss knife
 
 ## Concept-Diagram
 

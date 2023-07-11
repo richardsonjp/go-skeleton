@@ -1,7 +1,7 @@
 package model
 
 import (
-	ct "mgw/mgw-resi/internal/model/custom_type"
+	ct "go/skeleton/internal/model/custom_type"
 )
 
 type TimeAt = ct.TimeAt

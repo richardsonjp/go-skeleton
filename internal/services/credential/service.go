@@ -3,9 +3,9 @@ package credential
 import (
 	"context"
 	"github.com/google/uuid"
-	"mgw/mgw-resi/internal/model"
-	"mgw/mgw-resi/internal/model/enum"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	"go/skeleton/internal/model"
+	"go/skeleton/internal/model/enum"
+	timeutil "go/skeleton/pkg/utils/time"
 )
 
 func (s *credentialService) CreateCredential(ctx context.Context, userID uint) (*CredentialResponse, error) {

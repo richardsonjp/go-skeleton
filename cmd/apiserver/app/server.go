@@ -10,12 +10,12 @@ import (
 	"github.com/shopspring/decimal"
 	"golang.org/x/text/language"
 
-	"mgw/mgw-resi/cmd/apiserver/app/routes"
-	"mgw/mgw-resi/cmd/apiserver/app/store"
-	"mgw/mgw-resi/config"
-	"mgw/mgw-resi/pkg/utils/lang"
-	"mgw/mgw-resi/pkg/utils/logs"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	"go/skeleton/cmd/apiserver/app/routes"
+	"go/skeleton/cmd/apiserver/app/store"
+	"go/skeleton/config"
+	"go/skeleton/pkg/utils/lang"
+	"go/skeleton/pkg/utils/logs"
+	timeutil "go/skeleton/pkg/utils/time"
 )
 
 const (

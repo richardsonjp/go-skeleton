@@ -2,7 +2,7 @@ package tx
 
 import (
 	"context"
-	"mgw/mgw-resi/pkg/clients/db"
+	"go/skeleton/pkg/clients/db"
 )
 
 type TxRepo interface {

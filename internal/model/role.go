@@ -1,7 +1,7 @@
 package model
 
 import (
-	"mgw/mgw-resi/internal/model/enum"
+	"go/skeleton/internal/model/enum"
 	"time"
 )
 

@@ -1,15 +1,15 @@
 package repos
 
 import (
-	"mgw/mgw-resi/internal/repositories/branch"
-	"mgw/mgw-resi/internal/repositories/context"
-	"mgw/mgw-resi/internal/repositories/country"
-	"mgw/mgw-resi/internal/repositories/credential"
-	"mgw/mgw-resi/internal/repositories/misc"
-	"mgw/mgw-resi/internal/repositories/page"
-	"mgw/mgw-resi/internal/repositories/role"
-	"mgw/mgw-resi/internal/repositories/tx"
-	"mgw/mgw-resi/internal/repositories/user"
+	"go/skeleton/internal/repositories/branch"
+	"go/skeleton/internal/repositories/context"
+	"go/skeleton/internal/repositories/country"
+	"go/skeleton/internal/repositories/credential"
+	"go/skeleton/internal/repositories/misc"
+	"go/skeleton/internal/repositories/page"
+	"go/skeleton/internal/repositories/role"
+	"go/skeleton/internal/repositories/tx"
+	"go/skeleton/internal/repositories/user"
 )
 
 // put repos alias

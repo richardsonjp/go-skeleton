@@ -2,11 +2,11 @@ package authentication
 
 import (
 	"context"
+	"go/skeleton/internal/model/enum"
+	"go/skeleton/internal/services/credential"
+	"go/skeleton/pkg/utils/errors"
+	timeutil "go/skeleton/pkg/utils/time"
 	"golang.org/x/crypto/bcrypt"
-	"mgw/mgw-resi/internal/model/enum"
-	"mgw/mgw-resi/internal/services/credential"
-	"mgw/mgw-resi/pkg/utils/errors"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
 )
 
 func (s *authenticationService) AuthenticateSignin(ctx context.Context, params Signin) (*AuthenticateSessionResponse, error) {

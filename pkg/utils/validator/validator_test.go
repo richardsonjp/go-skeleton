@@ -2,7 +2,7 @@ package validator
 
 import (
 	"github.com/stretchr/testify/assert"
-	"mgw/mgw-resi/internal/model/enum"
+	"go/skeleton/internal/model/enum"
 	"testing"
 )
 

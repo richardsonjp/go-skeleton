@@ -7,8 +7,8 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 	"fmt"
+	"go/skeleton/pkg/utils/errors"
 	"io"
-	"mgw/mgw-resi/pkg/utils/errors"
 	"strings"
 
 	evp "github.com/walkert/go-evp"

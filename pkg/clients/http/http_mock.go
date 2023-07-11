@@ -1,7 +1,7 @@
 package http
 
 import (
-	"mgw/mgw-resi/pkg/utils/errors"
+	"go/skeleton/pkg/utils/errors"
 	"net/http"
 
 	"github.com/stretchr/testify/mock"

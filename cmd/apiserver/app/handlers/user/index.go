@@ -1,6 +1,6 @@
 package user
 
-import service "mgw/mgw-resi/internal/services"
+import service "go/skeleton/internal/services"
 
 type UserHandler struct {
 	userService service.UserService

@@ -3,10 +3,10 @@ package syncs
 
 import (
 	"fmt"
+	"go/skeleton/config"
+	"go/skeleton/pkg/utils/errors"
+	"go/skeleton/pkg/utils/logs"
 	"log"
-	"mgw/mgw-resi/config"
-	"mgw/mgw-resi/pkg/utils/errors"
-	"mgw/mgw-resi/pkg/utils/logs"
 	"reflect"
 
 	"github.com/gin-gonic/gin"

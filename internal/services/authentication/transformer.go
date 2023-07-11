@@ -1,9 +1,9 @@
 package authentication
 
 import (
-	"mgw/mgw-resi/internal/services/branch"
-	"mgw/mgw-resi/internal/services/credential"
-	"mgw/mgw-resi/internal/services/user"
+	"go/skeleton/internal/services/branch"
+	"go/skeleton/internal/services/credential"
+	"go/skeleton/internal/services/user"
 )
 
 func (c *AuthenticateSessionResponse) Transformer(user user.UserResponse, credential credential.CredentialResponse, branchName string) {

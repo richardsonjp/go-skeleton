@@ -1,8 +1,8 @@
 package credential
 
 import (
-	"mgw/mgw-resi/internal/model"
-	timeutil "mgw/mgw-resi/pkg/utils/time"
+	"go/skeleton/internal/model"
+	timeutil "go/skeleton/pkg/utils/time"
 )
 
 func (c *CredentialResponse) Transformer(data model.Credential) {

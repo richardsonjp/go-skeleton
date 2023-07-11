@@ -1,8 +1,8 @@
 package timeutil
 
 import (
-	"mgw/mgw-resi/pkg/utils/errors"
-	"mgw/mgw-resi/pkg/utils/null"
+	"go/skeleton/pkg/utils/errors"
+	"go/skeleton/pkg/utils/null"
 	"time"
 )
 

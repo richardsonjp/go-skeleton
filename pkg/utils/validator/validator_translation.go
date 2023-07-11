@@ -1,7 +1,7 @@
 package validator
 
 import (
-	"mgw/mgw-resi/pkg/utils/lang"
+	"go/skeleton/pkg/utils/lang"
 
 	"github.com/go-playground/validator/v10"
 )

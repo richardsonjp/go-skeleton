@@ -3,7 +3,7 @@ package apis
 import (
 	"fmt"
 
-	"mgw/mgw-resi/pkg/utils/json"
+	"go/skeleton/pkg/utils/json"
 
 	"github.com/go-resty/resty/v2"
 )
