@@ -29,3 +29,10 @@ func IsNil(value interface{}) bool {
 	}
 	return false
 }
+
+func DerefBool(b *bool) bool {
+	if b == nil {
+		return false
+	}
+	return *b
+}

@@ -2,33 +2,53 @@ package ct
 
 import (
 	"database/sql/driver"
-	"encoding/json"
-	"errors"
+	"fmt"
+	"strings"
 )
 
-// don't import any third party lib
-
+// StringArr is a custom type for PostgreSQL text arrays
 type StringArr []string
 
-// Value for sql.Valuer
-func (model StringArr) Value() (driver.Value, error) {
-	data, _ := json.Marshal(model)
-	return data, nil
-}
-
-func (model *StringArr) Scan(value interface{}) error {
+// Scan implements the sql.Scanner interface for reading from DB
+func (s *StringArr) Scan(value interface{}) error {
 	if value == nil {
+		*s = []string{}
 		return nil
 	}
 
-	bytes, ok := value.([]uint8)
+	str, ok := value.(string)
 	if !ok {
-		return errors.New("failed to unmarshal StringArr value")
+		return fmt.Errorf("cannot convert %T to StringArr", value)
 	}
 
-	err := json.Unmarshal(bytes, &model)
-	if err != nil {
-		return err
+	// Remove curly braces
+	str = strings.TrimPrefix(str, "{")
+	str = strings.TrimSuffix(str, "}")
+
+	if str == "" {
+		*s = []string{}
+	} else {
+		*s = strings.Split(str, ",")
 	}
 	return nil
+}
+
+// Value implements the driver.Valuer interface for writing to DB
+func (s StringArr) Value() (driver.Value, error) {
+	if len(s) == 0 {
+		return "{}", nil
+	}
+
+	// Escape any commas or special characters if needed
+	escaped := make([]string, len(s))
+	for i, v := range s {
+		escaped[i] = `"` + strings.ReplaceAll(v, `"`, `\"`) + `"`
+	}
+
+	return "{" + strings.Join(escaped, ",") + "}", nil
+}
+
+// GormDataType defines the type GORM should use in migrations
+func (StringArr) GormDataType() string {
+	return "text[]"
 }

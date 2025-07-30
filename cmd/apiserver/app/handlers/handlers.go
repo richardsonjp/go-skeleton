@@ -1,14 +1,17 @@
 package hds
 
 import (
-	"go-skeleton/cmd/apiserver/app/handlers/admin"
+	"go-skeleton/cmd/apiserver/app/handlers/user"
+	"go-skeleton/cmd/apiserver/app/handlers/user_auth"
 )
 
 // put handlers alias
 type (
-	AdminHandler = admin.AdminHandler
+	UserHandler     = user.UserHandler
+	UserAuthHandler = user_auth.UserAuthHandler
 )
 
 var (
-	NewAdminHandler = admin.NewAdminHandler
+	NewUserHandler     = user.NewUserHandler
+	NewUserAuthHandler = user_auth.NewUserAuthHandler
 )

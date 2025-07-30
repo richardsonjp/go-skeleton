@@ -1,18 +1,23 @@
 package middlewares
 
 import (
-	"go-skeleton/pkg/utils/errors"
-
 	"github.com/gin-gonic/gin"
+	"go-skeleton/config"
+	"go-skeleton/pkg/utils/errors"
 )
 
 // Generic header static API key validator middleware
-func (m *MiddlewareAccess) CheckHeaderStaticApiKey(header *string, apiKey *string, errorCode *int) gin.HandlerFunc {
+func CheckHeaderStaticApiKey() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		retrievedApiKey := c.Request.Header.Get(*header)
-		if retrievedApiKey == "" || retrievedApiKey != *apiKey {
-			errors.ErrorCode(c, *errorCode)
+		token := c.Request.Header.Get("STATIC-API-KEY")
+		if token == "" {
+			errors.ErrorCode(c, errors.TOKEN_UNAUTHORIZED)
 			return
+		}
+
+		keys := config.Config.MiddlewareKeys
+		if token != keys.StaticAPIKey {
+			errors.ErrorCode(c, errors.TOKEN_UNAUTHORIZED)
 		}
 
 		c.Next()

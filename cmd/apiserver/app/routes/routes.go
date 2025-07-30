@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"go-skeleton/cmd/apiserver/app/store"
 	"go-skeleton/internal/middlewares"
 
 	"github.com/gin-gonic/gin"
@@ -26,9 +27,16 @@ func Init(mode string) *gin.Engine {
 		})
 	})
 
+	r.Use(middlewares.CheckHeaderStaticApiKey())
+
+	// Setup auth route
+	authenticationRouteGroup := r.Group("/auth")
+	initAuthenticationRoute(authenticationRouteGroup)
+
 	// Setup sample route
-	sampleDashboardRouteGroup := r.Group("/dashboard")
-	initSampleRoute(sampleDashboardRouteGroup)
+	dashboardRouteGroup := r.Group("/dashboard")
+	dashboardRouteGroup.Use(store.MiddlewareDashboardAuth.AuthenticateUser())
+	initDashboardRoute(dashboardRouteGroup)
 
 	return r
 }

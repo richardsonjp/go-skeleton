@@ -23,6 +23,8 @@ var Config = struct {
 		Maxidleconns uint64 `env:"DB_MAXIDLECONNS" envDefault:"10"`
 		Timeout      uint64 `env:"DB_TIMEOUNT" envDefault:"5000"`
 		Debug        bool   `env:"DB_DEBUG" envDefault:"true"`
+		SSLMode      string `env:"DB_SSLMODE" envDefault:"disable"`
+		TimeZone     string `env:"DB_TIMEZONE" envDefault:"Asia/Jakarta"`
 	}
 
 	Redis struct {
@@ -41,6 +43,11 @@ var Config = struct {
 
 	APIServer struct {
 		LocalePath string `env:"APISERVER_LOCALE_PATH" envDefault:"cmd/apiserver/app/locale/"`
+	}
+
+	MiddlewareKeys struct {
+		StaticAPIKey       string `env:"STATIC_API_KEY" envDefault:"secret"`
+		StaticServerAPIKey string `env:"STATIC_SERVER_API_KEY" envDefault:"secret"`
 	}
 
 	AESCryptKey string `env:"AES_CRYPT_KEY" envDefault:""`

@@ -3,6 +3,7 @@ package wording
 import (
 	"fmt"
 	"go-skeleton/pkg/utils/array"
+	"golang.org/x/text/unicode/norm"
 	"math"
 	"math/big"
 	"regexp"
@@ -228,7 +229,7 @@ func ToSnakeCase(str string) string {
 	return strings.ToLower(snake)
 }
 
-//08 -> 62
+// 08 -> 62
 func NormalizePhoneNumber(phone string) string {
 	phone = strings.TrimSpace(phone)
 
@@ -238,7 +239,7 @@ func NormalizePhoneNumber(phone string) string {
 	return phone
 }
 
-//62 -> 08
+// 62 -> 08
 func DenormalizePhoneNumber(phone string) string {
 	phone = strings.TrimSpace(phone)
 	phone = strings.Replace(phone, "+62", "0", 1)
@@ -268,4 +269,17 @@ func FormatIDRCurrency(value *float64) string {
 	}
 
 	return p.Sprintf("%v%v", currency.Symbol(cur), dec)
+}
+
+func NormalizeEmail(email string) string {
+	// Convert to lowercase
+	email = strings.ToLower(email)
+
+	// Normalize unicode (handles accented characters)
+	email = norm.NFC.String(email)
+
+	// Trim whitespace
+	email = strings.TrimSpace(email)
+
+	return email
 }

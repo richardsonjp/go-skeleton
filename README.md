@@ -20,7 +20,7 @@
 ### Requirements
 
 - Golang:1.17
-- MySQL:8.0.25
+- PostgreSQL
 - [Gin](https://github.com/gin-gonic/gin/tree/v1.7.2)
 - [Gorm](https://github.com/go-gorm/gorm/tree/v1.21.11)
 - [Goose](https://github.com/pressly/goose)

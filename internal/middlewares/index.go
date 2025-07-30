@@ -1,15 +1,22 @@
 package middlewares
 
 import (
-	"go-skeleton/pkg/clients/redis"
+	service "go-skeleton/internal/services"
 )
 
 type MiddlewareAccess struct {
-	redisDel redis.RedisDelegate
 }
 
-func NewMiddlewareAccess(redisDel redis.RedisDelegate) MiddlewareAccess {
-	return MiddlewareAccess{
-		redisDel: redisDel,
+func NewMiddlewareAccess() MiddlewareAccess {
+	return MiddlewareAccess{}
+}
+
+type MiddlewareDashboardAuth struct {
+	authenticationService service.AuthenticationService
+}
+
+func NewMiddlewareDashboardAuth(authenticationService service.AuthenticationService) MiddlewareDashboardAuth {
+	return MiddlewareDashboardAuth{
+		authenticationService: authenticationService,
 	}
 }

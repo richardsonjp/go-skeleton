@@ -1,28 +1,40 @@
 package store
 
 import (
-	hdrs "go-skeleton/cmd/apiserver/app/handlers"
+	handler "go-skeleton/cmd/apiserver/app/handlers"
 	"go-skeleton/config"
 	"go-skeleton/internal/middlewares"
 	repos "go-skeleton/internal/repositories"
-	srvs "go-skeleton/internal/services"
+	"go-skeleton/internal/services"
 	"go-skeleton/pkg/clients/db"
 	"go-skeleton/pkg/clients/redis"
 )
 
 var (
-	// hdrs
-	AdminHandler *hdrs.AdminHandler
-
-	// srvs
-	AdminService srvs.AdminService
+	// handlers
+	UserAuthHandler *handler.UserAuthHandler
+	UserHandler     *handler.UserHandler
+	// services
+	AuthenticationService service.AuthenticationService
+	ContextPathService    service.ContextPathService
+	RoleService           service.RoleService
+	CredentialService     service.CredentialService
+	UserService           service.UserService
 
 	// repos
-	AdminRepo repos.AdminRepo
-	TxRepo    repos.TxRepo
+	CredentialRepo repos.CredentialRepo
+	RoleRepo       repos.RoleRepo
+	UserRepo       repos.UserRepo
+
+	ContextPathRepo  repos.ContextPathRepo
+	FrontendPathRepo repos.FrontendPathRepo
+	BackendPathRepo  repos.BackendPathRepo
+
+	TxRepo repos.TxRepo
 
 	//middleware
-	MiddlewareAccess middlewares.MiddlewareAccess
+	MiddlewareAccess        middlewares.MiddlewareAccess
+	MiddlewareDashboardAuth middlewares.MiddlewareDashboardAuth
 )
 
 // Init application global variable with single instance
@@ -35,15 +47,28 @@ func InitDI() {
 	//nullHTTP := http.NewHTTPClient("", nil)
 
 	// repos
-	AdminRepo = repos.NewAdminRepo(dbdget)
 	TxRepo = repos.NewTxRepo(dbdget)
 
-	// services
-	AdminService = srvs.NewAdminService(AdminRepo)
+	ContextPathRepo = repos.NewContextPathRepo(dbdget)
+	FrontendPathRepo = repos.NewFrontendPathRepo(dbdget)
+	BackendPathRepo = repos.NewBackendPathRepo(dbdget)
 
-	// hdrs
-	AdminHandler = hdrs.NewAdminHandler(AdminService)
+	CredentialRepo = repos.NewCredentialRepo(dbdget)
+	RoleRepo = repos.NewRoleRepo(dbdget)
+	UserRepo = repos.NewUserRepo(dbdget)
+
+	// services
+	ContextPathService = service.NewContextPathService(ContextPathRepo)
+	RoleService = service.NewRoleService(TxRepo, RoleRepo, ContextPathService)
+	CredentialService = service.NewCredentialService(CredentialRepo)
+	UserService = service.NewUserService(UserRepo, RoleService)
+	AuthenticationService = service.NewAuthenticationService(TxRepo, UserService, CredentialService, ContextPathService, RoleService)
+
+	// handlers
+	UserHandler = handler.NewUserHandler(UserService, RoleService)
+	UserAuthHandler = handler.NewUserAuthHandler(AuthenticationService)
 
 	// middleware
-	MiddlewareAccess = middlewares.NewMiddlewareAccess(redisDel)
+	MiddlewareAccess = middlewares.NewMiddlewareAccess()
+	MiddlewareDashboardAuth = middlewares.NewMiddlewareDashboardAuth(AuthenticationService)
 }
