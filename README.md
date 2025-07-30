@@ -19,15 +19,14 @@
 
 ### Requirements
 
-- Golang:1.17
+- Golang:1.23.0
 - PostgreSQL
 - [Gin](https://github.com/gin-gonic/gin/tree/v1.7.2)
 - [Gorm](https://github.com/go-gorm/gorm/tree/v1.21.11)
-- [Goose](https://github.com/pressly/goose)
-- [Richgo](https://github.com/kyoh86/richgo)
 - [Godotenv](https://github.com/joho/godotenv/v1.3.0)
 - [Validator](https://github.com/go-playground/validator)
-- [Delve](https://github.com/go-delve/delve) Debug swiss knife
+
+[//]: # (- [Delve]&#40;https://github.com/go-delve/delve&#41; Debug swiss knife)
 
 ## Concept-Diagram
 
